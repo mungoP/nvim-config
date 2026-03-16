@@ -230,13 +230,7 @@ return {
     local servers = {
       ts_ls = {},
       ruff = {},
-      pyright = {
-        settings = {
-          python = {
-            venvPath = '/Users/mungoprus-shearer/.local/pipx/venvs/pytest/bin/python',
-          },
-        },
-      },
+      pyright = {},
       -- pylsp = {
       --   settings = {
       --     pylsp = {
