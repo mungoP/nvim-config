@@ -30,7 +30,6 @@
 --     end,
 --   },
 -- }
-
 return {
   {
     'folke/tokyonight.nvim',
@@ -52,7 +51,8 @@ return {
           },
         }
 
-        vim.cmd.colorscheme 'tokyonight'
+        vim.cmd 'colorscheme tokyonight'
+        vim.cmd 'doautocmd ColorScheme tokyonight'
       end
 
       -- Apply initially
