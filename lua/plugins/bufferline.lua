@@ -1,7 +1,7 @@
 return {
   'akinsho/bufferline.nvim',
   dependencies = {
-    'famiu/bufdelete.nvim',  -- Replaced moll/vim-bbye with bufdelete.nvim
+    'famiu/bufdelete.nvim', -- Replaced moll/vim-bbye with bufdelete.nvim
     'nvim-tree/nvim-web-devicons',
   },
   config = function()
@@ -11,7 +11,7 @@ return {
         themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
         numbers = 'none', -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
         -- Use bufdelete.nvim for smarter buffer closing
-        close_command = function(n) 
+        close_command = function(n)
           require('bufdelete').bufdelete(n, false)
         end,
         buffer_close_icon = '✗',
@@ -61,4 +61,3 @@ return {
     }
   end,
 }
-

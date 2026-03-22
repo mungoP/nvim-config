@@ -1,5 +1,41 @@
 -- return {
 --   {
+--     'loctvl842/monokai-pro.nvim',
+--     priority = 1000,
+--     lazy = false,
+--     config = function()
+--       local bg_transparent = true
+--
+--       local function apply_theme()
+--         require('monokai-pro').setup {
+--           transparent_background = bg_transparent,
+--           filter = 'octagon',
+--           terminal_colors = true,
+--           styles = {
+--             comment = { italic = true },
+--             keyword = { italic = true },
+--           },
+--         }
+--         vim.cmd.colorscheme 'monokai-pro-octagon'
+--       end
+--
+--       -- Apply initially
+--       apply_theme()
+--
+--       -- Toggle function
+--       local toggle_transparency = function()
+--         bg_transparent = not bg_transparent
+--         apply_theme()
+--       end
+--
+--       -- Keymap
+--       vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
+--     end,
+--   },
+-- }
+
+-- return {
+--   {
 --     'catppuccin/nvim',
 --     name = 'catppuccin',
 --     priority = 1000,
@@ -30,45 +66,45 @@
 --     end,
 --   },
 -- }
-return {
-  {
-    'folke/tokyonight.nvim',
-    priority = 1000,
-    lazy = false,
-
-    config = function()
-      local bg_transparent = true
-
-      local function apply_theme()
-        require('tokyonight').setup {
-          style = 'night', -- important
-          transparent = bg_transparent,
-          styles = {
-            comments = { italic = true },
-            keywords = { italic = true },
-            sidebars = bg_transparent and 'transparent' or 'dark',
-            floats = bg_transparent and 'transparent' or 'dark',
-          },
-        }
-
-        vim.cmd 'colorscheme tokyonight'
-        vim.cmd 'doautocmd ColorScheme tokyonight'
-      end
-
-      -- Apply initially
-      apply_theme()
-
-      -- Toggle function
-      local toggle_transparency = function()
-        bg_transparent = not bg_transparent
-        apply_theme()
-      end
-
-      -- Keymap
-      vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
-    end,
-  },
-}
+-- return {
+--   {
+--     'folke/tokyonight.nvim',
+--     priority = 1000,
+--     lazy = false,
+--
+--     config = function()
+--       local bg_transparent = true
+--
+--       local function apply_theme()
+--         require('tokyonight').setup {
+--           style = 'night', -- important
+--           transparent = bg_transparent,
+--           styles = {
+--             comments = { italic = true },
+--             keywords = { italic = true },
+--             sidebars = bg_transparent and 'transparent' or 'dark',
+--             floats = bg_transparent and 'transparent' or 'dark',
+--           },
+--         }
+--
+--         vim.cmd 'colorscheme tokyonight'
+--         vim.cmd 'doautocmd ColorScheme tokyonight'
+--       end
+--
+--       -- Apply initially
+--       apply_theme()
+--
+--       -- Toggle function
+--       local toggle_transparency = function()
+--         bg_transparent = not bg_transparent
+--         apply_theme()
+--       end
+--
+--       -- Keymap
+--       vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
+--     end,
+--   },
+-- }
 
 -- return {
 --   {
@@ -126,36 +162,36 @@ return {
 --     end,
 --   },
 -- }
--- return {
---   {
---     'Mofiqul/dracula.nvim',
---     lazy = false,
---     priority = 1000,
---     config = function()
---       local dracula = require("dracula")
---
---       -- Initial setup
---       local bg_transparent = false
---       dracula.setup({
---         transparent_bg = bg_transparent,
---         italic_comment = true,
---         show_end_of_buffer = true,
---       })
---       vim.cmd [[colorscheme dracula]]
---
---       -- Toggle background transparency
---       local toggle_transparency = function()
---         bg_transparent = not bg_transparent
---         dracula.setup({
---           transparent_bg = bg_transparent,
---           italic_comment = true,
---           show_end_of_buffer = true,
---         })
---         vim.cmd [[colorscheme dracula]]
---       end
---
---       -- Map <leader>bg to toggle transparency
---       vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
---     end,
---   }
--- }
+return {
+  {
+    'Mofiqul/dracula.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      local dracula = require 'dracula'
+
+      -- Initial setup
+      local bg_transparent = true
+      dracula.setup {
+        transparent_bg = bg_transparent,
+        italic_comment = true,
+        show_end_of_buffer = true,
+      }
+      vim.cmd [[colorscheme dracula]]
+
+      -- Toggle background transparency
+      local toggle_transparency = function()
+        bg_transparent = not bg_transparent
+        dracula.setup {
+          transparent_bg = bg_transparent,
+          italic_comment = true,
+          show_end_of_buffer = true,
+        }
+        vim.cmd [[colorscheme dracula]]
+      end
+
+      -- Map <leader>bg to toggle transparency
+      vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
+    end,
+  },
+}
