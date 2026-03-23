@@ -5,7 +5,7 @@ return {
       'mode',
       -- fmt = function(str)
       --   return ' ' .. str
-        -- return ' ' .. str:sub(1, 1) -- displays only the first character of the mode
+      -- return ' ' .. str:sub(1, 1) -- displays only the first character of the mode
       -- end,
     }
 
@@ -43,9 +43,9 @@ return {
         theme = 'auto', -- Set theme based on environment variable
         -- Some useful glyphs:
         -- https://www.nerdfonts.com/cheat-sheet
-        --        
-        section_separators = { left = '', right = '' },
-        component_separators = { left = '', right = '' },
+        --          
+        section_separators = { left = '', right = '' },
+        component_separators = { left = '', right = '' },
         disabled_filetypes = { 'alpha', 'neo-tree' },
         always_divide_middle = true,
       },
