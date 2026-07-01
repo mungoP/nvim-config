@@ -280,6 +280,7 @@ return {
       jdtls = {},
       -- C/C++ support
       clangd = {},
+      neocmake = {},
     }
 
     -- Ensure the servers and tools above are installed

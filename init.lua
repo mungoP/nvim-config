@@ -30,6 +30,7 @@ require('lazy').setup({
   require 'plugins.indent-blankline',
   require 'plugins.comment',
   require 'plugins.misc',
+  require 'plugins.cmake',
 }, {
   rocks = {
     enabled = false,
