@@ -31,6 +31,7 @@ require('lazy').setup({
   require 'plugins.comment',
   require 'plugins.misc',
   require 'plugins.cmake',
+  require 'plugins.gitdiffview',
 }, {
   rocks = {
     enabled = false,
