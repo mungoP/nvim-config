@@ -32,6 +32,7 @@ require('lazy').setup({
   require 'plugins.misc',
   require 'plugins.cmake',
   require 'plugins.gitdiffview',
+  require 'plugins.smear-cursor',
 }, {
   rocks = {
     enabled = false,
