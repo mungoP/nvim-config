@@ -27,6 +27,10 @@ vim.keymap.set({ 'n', 'v' }, 'x', '"_x', opts)
 vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
 vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
 
+-- Comment out line --
+vim.keymap.set('n', '<C-c>', 'gcc', { remap = true, desc = 'Toggle comment' })
+vim.keymap.set('v', '<C-c>', 'gc', { remap = true, desc = 'Toggle comment' })
+
 -- Scroll LSP hover float
 vim.keymap.set('n', '<C-f>', function()
   local wins = vim.api.nvim_list_wins()
