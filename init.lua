@@ -17,7 +17,8 @@ require('lazy').setup({
   { 'folke/lazy.nvim', version = '*' },
 
   require 'plugins.neotree',
-  require 'plugins.colortheme',
+  -- Color theme: swap the file name to change themes (see lua/plugins/colorthemes/)
+  require 'plugins.colorthemes.kanagawa',
   require 'plugins.bufferline',
   require 'plugins.lualine',
   require 'plugins.treesitter',
