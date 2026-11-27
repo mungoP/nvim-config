@@ -279,7 +279,13 @@ return {
       -- Java support
       jdtls = {},
       -- C/C++ support
-      clangd = {},
+      clangd = {
+        cmd = {
+          'clangd',
+          -- let clangd ask the ARM cross-compiler for its system headers (newlib etc.)
+          '--query-driver=/opt/homebrew/bin/arm-none-eabi-*,/Applications/ArmGNUToolchain/**/bin/arm-none-eabi-*',
+        },
+      },
       neocmake = {},
     }
 

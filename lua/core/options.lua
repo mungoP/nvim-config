@@ -41,3 +41,5 @@ vim.opt.shortmess:append 'c' -- don't give |ins-completion-menu| messages
 vim.opt.iskeyword:append '-' -- hyphenated words recognized by searches
 vim.opt.formatoptions:remove { 'c', 'r', 'o' } -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
 vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- separate vim plugins from neovim in case vim still in use
+vim.opt.modeline = false -- ignore vi:/ex: modelines in files (CubeMX main.c has an 'ex: printf(...)' comment that triggers E518)
+vim.o.autoread = true -- autoupdate files when edited outside Neovim
