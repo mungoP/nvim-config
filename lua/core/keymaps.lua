@@ -131,6 +131,23 @@ vim.keymap.set('n', ']d', function()
   vim.diagnostic.jump { count = 1, float = true }
 end, { desc = 'Go to next diagnostic message' })
 
+-- Git hunk navigation (gitsigns)
+vim.keymap.set('n', ']g', function()
+  if vim.wo.diff then
+    vim.cmd.normal { ']c', bang = true }
+  else
+    require('gitsigns').nav_hunk 'next'
+  end
+end, { desc = 'Go to next git change' })
+
+vim.keymap.set('n', '[g', function()
+  if vim.wo.diff then
+    vim.cmd.normal { '[c', bang = true }
+  else
+    require('gitsigns').nav_hunk 'prev'
+  end
+end, { desc = 'Go to previous git change' })
+
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 

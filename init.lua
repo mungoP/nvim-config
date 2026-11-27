@@ -18,7 +18,7 @@ require('lazy').setup({
 
   require 'plugins.neotree',
   -- Color theme: swap the file name to change themes (see lua/plugins/colorthemes/)
-  require 'plugins.colorthemes.kanagawa',
+  require 'plugins.colorthemes.tokyonight',
   require 'plugins.bufferline',
   require 'plugins.lualine',
   require 'plugins.treesitter',
